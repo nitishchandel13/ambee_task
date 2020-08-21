@@ -12,12 +12,12 @@ npm install -g webpack-dev-server
 
 and then run 'num start'
 
-# backend
+# Backend
 Go to the server folder and run 'npm install'
 and then run node app or 'npm start'
 
 
-# docker
+# Docker
 In case of docker you can run docker-compose build in root folder
 
 docker-compose build

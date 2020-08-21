@@ -22,7 +22,7 @@ mongoose.connect(config.DB, { useNewUrlParser: true }).then(
 var db = mongoose.connection;
 db.on('error', (error) => {
     if (error.message && error.message.match(/failed to connect to server .* on first connect/)) {
-        setTimeout () => {
+        setTimeout (() => {
             mongoose.connect(config.DB, {useNewUrlParser: true}).catch(() => {
           })
         }, 1000)
