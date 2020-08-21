@@ -11,3 +11,15 @@ your system also have install webpack-dev-sever
 npm install -g webpack-dev-server
 
 and then run 'num start'
+
+# backend
+Go to the server folder and run 'npm install'
+and then run node app or 'npm start'
+
+
+# docker
+In case of docker you can run docker-compose build in root folder
+
+docker-compose build
+
+docker-compose up
