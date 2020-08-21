@@ -156,10 +156,10 @@ export default {
         return
       }
       var body = {
-        pname: this.selectedOption,
-        pvalue: this.concentaration,
-        cname: this.cname,
-        cemailid: this.emailId
+        pName: this.selectedOption,
+        pValue: this.concentaration,
+        cName: this.cname,
+        cEmailId: this.emailId
       }
       axios.post('http://localhost:5000/api/threads/createThreads', body).then(r => {
         this.aqi = r.data.aqi
