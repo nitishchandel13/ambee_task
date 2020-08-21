@@ -7,7 +7,6 @@ module.exports = function ValidThreadInputs(data) {
     data.pValue   = !isEmpty(data.pValue) ? data.pValue : '';
     data.cName    = !isEmpty(data.cName) ? data.cName : '';
     data.cEmailId = !isEmpty(data.cEmailId) ? data.cEmailId : '';
-
     if(Validator.isEmpty(data.pName)) {
         errors.pName = 'pollutant name is required';
     }
@@ -19,9 +18,11 @@ module.exports = function ValidThreadInputs(data) {
     if(Validator.isEmpty(data.cName)) {
         errors.cName = 'customer name is required';
     }
-
     if(Validator.isEmpty(data.cEmailId)) {
         errors.cEmailId = 'customer email  is required';
+    }
+    if(!Validator.isEmail(data.cEmailId)) {
+        errors.cEmailId = 'customer email  is not valid';
     }
 
     return {

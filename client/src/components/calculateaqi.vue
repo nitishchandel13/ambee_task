@@ -112,6 +112,7 @@
 <script>
 import axios from 'axios'
 import navbar from './navbar'
+import swal from 'sweetalert'
 export default {
   name: 'calculateaqi',
   components: {navbar},
@@ -152,7 +153,7 @@ export default {
     },
     getTheAqi: function () {
       if (this.selectedOption === '' || this.concentaration === '' || this.cname === '' || this.emailId === '') {
-        alert('please enter name email concentration and also select option')
+        swal('Oh noes!', 'Please enter name, emailId, concentration and also select option', 'error')
         return
       }
       var body = {
